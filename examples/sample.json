@@ -1,0 +1,15 @@
+{
+  "database": "db/sample.sqlite3",
+  "urls": [
+    "http://www.keio.ac.jp/index-jp.html"
+  ],
+  "tags": [
+    "h1",
+    "h2",
+    "h3",
+    "p",
+    "ul",
+    "span",
+    "img"
+  ]
+}
