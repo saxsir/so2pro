@@ -13,6 +13,7 @@
   "dependencies": {
     "svm": "~0.1.1",
     "phantom": "~0.5.4",
-    "sqlite3": "~2.2.0"
+    "sqlite3": "~2.2.0",
+    "coffee-script": "~1.6.3"
   }
 }
