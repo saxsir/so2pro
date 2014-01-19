@@ -2,9 +2,10 @@
 
 error = (message)->
   console.error message
+  process.exit()
 
 class WebSpider
-  constructur:
+  constructor: ->
     @
   run: (config)->
     @urls = config.urls
@@ -75,9 +76,9 @@ class WebSpider
     self = @
     for tag in @tags
       @db.serialize ->
-        self.db.run 'CREATE TABLE IF NOT EXISTS ' + tag + ' (width INTEGER, height INTEGER, top INTEGER, left INTEGER)'
+        self.db.run 'CREATE TABLE IF NOT EXISTS ' + tag + ' (id INTEGER PRIMARY KEY, width INTEGER, height INTEGER, top INTEGER, left INTEGER)'
         self.db.serialize ->
-          stmt = self.db.prepare 'INSERT INTO ' + tag + ' VALUES (?, ?, ?, ?)'
+          stmt = self.db.prepare 'INSERT INTO ' + tag + ' VALUES (null, ?, ?, ?, ?)'
           for data in result[tag]
             stmt.run data.width, data.height, data.top, data.left
           stmt.finalize()
