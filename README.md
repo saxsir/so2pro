@@ -2,7 +2,9 @@ so2pro
 ---
 
 # What's so2pro?
-卒プロの提出用コード
+卒プロの提出用コード。masterブランチは最終発表までに更新する可能性あり。
+
+提出時に切ったブランチ → [submitted_20140120](https://github.com/saxsir/so2pro/tree/submitted_20140120)
 
 # Usage
 - Clone this repository.
